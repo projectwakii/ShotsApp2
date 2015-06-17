@@ -20,10 +20,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="8QR-R0-oCH">
             <objects>
-                <viewController id="d1t-1G-x6a" customClass="ViewController" customModule="ShotsApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d1t-1G-x6a" customClass="Home" customModule="ShotsApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G9Y-h9-tbn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,9 +44,6 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="210"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="image"/>
-                                                <connections>
-                                                    <segue destination="XYj-yY-DMP" kind="push" id="6OA-t3-epq"/>
-                                                </connections>
                                             </button>
                                             <view alpha="0.5" contentMode="scaleToFill" id="xbg-V9-6A3">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="60"/>
@@ -118,12 +115,15 @@
                                         <rect key="frame" x="248" y="40" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="button-user"/>
+                                        <connections>
+                                            <action selector="userButtonDidPress:" destination="d1t-1G-x6a" eventType="touchUpInside" id="Vt1-mB-Acf"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" id="fvG-Sw-SMS">
                                         <rect key="frame" x="127" y="88" width="170" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="popover-bg" id="Lww-og-Lm0">
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="popover-bg" id="Lww-og-Lm0">
                                                 <rect key="frame" x="0.0" y="-1" width="170" height="141"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
@@ -214,6 +214,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="dhH-HU-Ocv" id="5vL-gm-81f"/>
+                        <outlet property="avatarImageView" destination="cqC-hE-uDj" id="zB3-z2-uzf"/>
+                        <outlet property="backgroundImageView" destination="6Jp-hU-xAI" id="oIk-w2-fX9"/>
+                        <outlet property="backgroundMaskView" destination="FJo-2J-JVS" id="gRT-oQ-CLn"/>
+                        <outlet property="dialogView" destination="3AW-r4-vcx" id="Gyx-Wj-vQB"/>
+                        <outlet property="favoritesLabel" destination="AuH-5S-ZYX" id="kRI-M6-V8d"/>
+                        <outlet property="headerView" destination="xbg-V9-6A3" id="CR6-kw-gmN"/>
+                        <outlet property="imageButton" destination="wn3-Qn-otV" id="Hsa-rN-f4N"/>
+                        <outlet property="likeButton" destination="Wcs-FD-3A7" id="WEb-Za-v4G"/>
+                        <outlet property="popoverView" destination="fvG-Sw-SMS" id="0J0-4x-zLE"/>
+                        <outlet property="shareButton" destination="VJ6-pu-BbU" id="2oN-g5-XOe"/>
+                        <outlet property="shareView" destination="qRl-Vx-CrA" id="ucp-PO-YBC"/>
+                        <outlet property="titleLabel" destination="MHW-63-shJ" id="g2D-dW-KHu"/>
+                        <outlet property="userButton" destination="gFZ-l1-9sy" id="AqA-Dk-6aP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXR-ld-Vys" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -268,19 +284,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAG-Ql-5bn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="98" y="694"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="zCd-jZ-Zzx">
-            <objects>
-                <viewController id="onE-kM-SgA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6E2-3Q-aQm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="inw-PX-nZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
