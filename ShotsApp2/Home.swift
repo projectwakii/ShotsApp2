@@ -17,15 +17,27 @@ class Home: UIViewController {
     @IBOutlet weak var backgroundMaskView: UIView!
     
     @IBOutlet weak var dialogView: UIView!
+    
     @IBOutlet weak var imageButton: UIButton!
+    @IBAction func imageButtonDidPress(sender: AnyObject) {
+        print("Image button pressed.")
+    }
+    
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var favoritesLabel: UIImageView!
-    @IBOutlet weak var likeButton: UIButton!
-    @IBOutlet weak var shareButton: UIButton!
     
+    @IBOutlet weak var likeButton: UIButton!
+    @IBAction func likeButtonDidPress(sender: AnyObject) {
+        print("Like button pressed.")
+    }
+    
+    @IBOutlet weak var shareButton: UIButton!
+    @IBAction func shareButtonDidPress(sender: AnyObject) {
+        print("Share button pressed.")
+    }
     
     
     
