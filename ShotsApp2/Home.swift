@@ -11,6 +11,18 @@ import UIKit
 class Home: UIViewController {
     
     @IBOutlet weak var userButton: UIButton!
+    @IBAction func userButtonDidPress(sender: AnyObject) {
+        print("User button pressed.")
+        
+        //popoverView is initially hidden. This is something that can be switched on/off in the Attributes inspector, after selecting Popover View in Interface Builder.
+        //To show the popoverView, simply type popoverView.hidden = false.
+        
+        popoverView.hidden = false
+        
+        //By using popoverView.hidden = !popoverView.hidden, we flip the bool value to the opposite of what it already is (e.g. true --> false)
+        // popoverView.hidden = !popoverView.hidden
+    }
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     
@@ -37,6 +49,7 @@ class Home: UIViewController {
     @IBOutlet weak var shareButton: UIButton!
     @IBAction func shareButtonDidPress(sender: AnyObject) {
         print("Share button pressed.")
+        shareView.hidden = false
     }
     
     
